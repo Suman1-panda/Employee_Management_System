@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee System</title>
+</head>
+<body>
+
+<h1>Employee List</h1>
+
+<!-- Form (optional add employee) -->
+<form action="/save" method="post" enctype="multipart/form-data">
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="text" name="email"><br><br>
+    Image: <input type="file" name="image"><br><br>
+    <button type="submit">Save</button>
+</form>
+
+<hr>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Image</th>
+        <th>Action</th>
+    </tr>
+
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.email}"></td>
+        <td>
+            <img th:src="@{'/images/' + ${emp.imageName}}" width="100"/>
+        </td>
+        <td>
+            <a th:href="@{'/delete/' + ${emp.id}}">Delete</a>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

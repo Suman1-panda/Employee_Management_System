@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee System</title>
+</head>
+<body>
+
+<h1>Employee List</h1>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Image</th>
+    </tr>
+
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.email}"></td>
+        <td>
+            <img th:src="@{'/images/' + ${emp.imageName}}" width="100"/>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
