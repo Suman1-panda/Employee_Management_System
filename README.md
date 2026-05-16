@@ -36,37 +36,13 @@ This project solves these issues by:
 
 ---
 
-# 📸 Project Screenshots
-
-## 🏠 Home Page
-
-![Home Page](https://via.placeholder.com/1000x500.png?text=Employee+Management+System+Home+Page)
-
----
-
-## ➕ Add Employee Page
-
-![Add Employee](https://via.placeholder.com/1000x500.png?text=Add+Employee+Page)
-
----
-
-## 📋 Employee List
-
-![Employee List](https://via.placeholder.com/1000x500.png?text=Employee+List+Page)
-
----
-
-## ✏️ Update Employee Page
-
-![Update Employee](https://via.placeholder.com/1000x500.png?text=Update+Employee+Page)
-
----
-
 # 🏗️ Project Folder Architecture
 
+```text
 employee-system/
 │
-├── .mvn/wrapper
+├── .mvn/
+│   └── wrapper/
 │
 ├── src/
 │   ├── main/
@@ -77,18 +53,19 @@ employee-system/
 │   │   │   ├── service/
 │   │   │   └── EmployeeSystemApplication.java
 │   │   │
-│   │   ├── resources/
-│   │   │   ├── static/
-│   │   │   ├── templates/
-│   │   │   └── application.properties
+│   │   └── resources/
+│   │       ├── static/
+│   │       ├── templates/
+│   │       └── application.properties
 │   │
-│   ├── test/java/com/example/employee_system
+│   └── test/java/com/example/employee_system/
 │
 ├── .gitattributes
 ├── .gitignore
 ├── mvnw
 ├── mvnw.cmd
 └── pom.xml
+```
 
 ---
 
